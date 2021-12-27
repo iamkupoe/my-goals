@@ -28,7 +28,9 @@ export default function App() {
       </View>
       <View>
         {myGoals.map((goal) => (
-          <Text key={goal}>{goal}</Text>
+          <View key={goal} style={styles.listItems}>
+            <Text>{goal}</Text>
+          </View>
         ))}
       </View>
     </View>
@@ -56,9 +58,16 @@ const styles = StyleSheet.create({
     borderColor: "black",
     borderWidth: 1,
     padding: 10,
+    color: "blue",
   },
-  button: {
-    width: 80,
-    height: 100,
+
+  listItems: {
+    padding: 10,
+    marginTop: 10,
+    paddingVertical: 10,
+    backgroundColor: "#ccc",
+    borderColor: "black",
+    borderWidth: 1,
+    color: "blue",
   },
 });
